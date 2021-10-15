@@ -1,25 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+import Landing from "./components/Landing";
+
+import { getTheme } from "./themes/getTheme";
+import { ThemeProvider } from "styled-components";
+
+import { useSelector } from "react-redux";
 
 function App() {
+  const themeName = useSelector((state) => state.themeName);
+
+  console.log(themeName, "app js");
+  console.log(getTheme(themeName), "theme object app");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        dsfds
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={getTheme(themeName)}>
+      <Landing />
+    </ThemeProvider>
   );
 }
 
