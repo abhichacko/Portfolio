@@ -1,5 +1,5 @@
 import { THEMES } from "../constants/theme";
-import { LIGHT, DARK, APPLE } from "../themes/";
+import { LIGHT, DARK } from "../themes/";
 
 export const getTheme = (themeName) => {
   switch (themeName) {
@@ -9,8 +9,6 @@ export const getTheme = (themeName) => {
     case THEMES.DARK:
       return DARK;
 
-    case THEMES.APPLE:
-      return APPLE;
     default:
       return LIGHT;
   }

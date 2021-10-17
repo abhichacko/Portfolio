@@ -1,13 +1,23 @@
-import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { StyleWrapper } from "./NavBar.styled";
-import { VscColorMode } from "react-icons/vsc";
+import { MdNightlight } from "react-icons/md";
+import { BsLightningChargeFill } from "react-icons/bs";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 
-const NavBar = (props) => {
-  const changeThemeName = (e) => {
-    changeTheme(e);
+const NavBar = () => {
+  const [themeName, setThemeName] = useState(THEMES.DARK);
+  const [toggleClass, setToggleClass] = useState("navbar-light");
+  const changeThemeName = () => {
+    changeTheme(themeName);
+    if (themeName === THEMES.DARK) {
+      setThemeName(THEMES.LIGHT);
+      setToggleClass("navbar-dark");
+    } else {
+      setThemeName(THEMES.DARK);
+      setToggleClass("navbar-light");
+    }
   };
   return (
     <StyleWrapper>
@@ -20,31 +30,25 @@ const NavBar = (props) => {
               </div>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className={toggleClass}
+          />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto justify-content-md-center">
-              <Nav.Link href="#features" className="mx-auto">
-                About
-              </Nav.Link>
-              <Nav.Link href="#pricing" className="mx-auto">
-                Skills
-              </Nav.Link>
-              <Nav.Link href="#pricing" className="mx-auto">
-                Projects
-              </Nav.Link>
-              <Nav.Link href="#pricing" className="mx-auto">
-                Contact
-              </Nav.Link>
+            <Nav className="ms-auto">
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#skills">Skills</Nav.Link>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
-            <NavDropdown
-              title={<VscColorMode className="theme-icon" />}
-              id="collasible-nav-dropdown"
-              onSelect={changeThemeName}
-            >
-              <NavDropdown.Item eventKey={THEMES.LIGHT}>Light</NavDropdown.Item>
-              <NavDropdown.Item eventKey={THEMES.DARK}>Dark</NavDropdown.Item>
-              <NavDropdown.Item eventKey={THEMES.APPLE}>Apple</NavDropdown.Item>
-            </NavDropdown>
+            {themeName === THEMES.DARK ? (
+              <MdNightlight className="theme-icon" onClick={changeThemeName} />
+            ) : (
+              <BsLightningChargeFill
+                className="theme-icon"
+                onClick={changeThemeName}
+              />
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

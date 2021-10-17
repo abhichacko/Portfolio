@@ -2,28 +2,70 @@ import styled from "styled-components";
 
 export const StyleWrapper = styled.div`
   .navbar {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .dropdown-toggle::after {
     display: none;
   }
+
+  .navbar-nav .nav-link {
+    color: ${(props) => props.theme.fontColor} !important;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-left: 2.5rem !important;
+    text-align: center;
+    &.active {
+      border-left: solid 0.3rem;
+
+      @media screen and (max-width: 500px) {
+        //do Smth
+        border-left: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: flex;
+      width: 0%;
+      height: 2px;
+      background: ${(props) => props.theme.fontColor};
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    @media screen and (max-width: 500px) {
+      //do Smth
+      margin-left: 0rem !important;
+    }
+  }
   .theme-icon {
     color: ${(props) => props.theme.fontColor};
     font-size: 1.8rem;
-  }
-  .navbar-nav .nav-link {
-    color: ${(props) => props.theme.fontColor};
+    margin-left: 2rem;
+    &:hover {
+      border-radius: 100%;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    @media screen and (max-width: 500px) {
+      //do Smth
+      margin-left: 0rem !important;
+    }
   }
   .dropdown-menu {
     background-color: ${(props) => props.theme.background};
+    background-image: url(${(props) => props.theme.backgroundImage});
+
     & .dropdown-item {
       color: ${(props) => props.theme.fontColor};
+      /* font-weight: bold; */
+      &:hover {
+        background-color: ${(props) => props.theme.background};
+      }
     }
   }
 
-  body {
-    background-color: #333;
-  }
   .navbar-brand {
     > .wrapper {
       top: 0;
@@ -36,20 +78,22 @@ export const StyleWrapper = styled.div`
       height: 3.6rem;
       > .circle {
         border-radius: 100%;
-        width: 3.6rem;
+        width: 3.8rem;
         height: 3.6rem;
-        border: 1px solid ${(props) => props.theme.logoBackground};
+        border: 1px solid ${(props) => props.theme.fontColor};
         display: block;
-        box-shadow: 0px 6px 3px ${(props) => props.theme.logoBackground};
+        box-shadow: 0px 6px 3px ${(props) => props.theme.fontColor};
         cursor: pointer;
         > #text {
-          font: Arial;
           font-size: 2rem;
           font-weight: bold;
           text-decoration: none !important;
-          color: ${(props) => props.theme.logoBackground};
+          color: ${(props) => props.theme.fontColor};
         }
       }
     }
+  }
+  .navbar-collapse {
+    text-align: center;
   }
 `;
