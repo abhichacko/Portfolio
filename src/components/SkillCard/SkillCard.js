@@ -5,6 +5,8 @@ import {
   SiReact,
   SiRedux,
   SiBootstrap,
+  SiCypress,
+  SiMaterialui,
 } from "react-icons/si";
 import { StyleWrapper } from "./SkillCard.styled";
 
@@ -25,10 +27,14 @@ const SkillCard = (props) => {
         return <SiRedux className="icon" />;
       case "Bootstrap":
         return <SiBootstrap className="icon" />;
+      case "Material UI":
+        return <SiMaterialui className="icon" />;
       case "GIT":
         return <FaGitAlt className="icon" />;
       case "Agile":
         return <FaProjectDiagram className="icon" />;
+      case "Cypress":
+        return <SiCypress className="icon" />;
       default:
         return <FaHtml5 className="icon" />;
     }
@@ -37,7 +43,7 @@ const SkillCard = (props) => {
   return (
     <StyleWrapper className="d-flex align-items-center flex-column">
       {getIcon(props.skillName)}
-      <h4>{props.skillName}</h4>
+      <h5>{props.skillName}</h5>
     </StyleWrapper>
   );
 };

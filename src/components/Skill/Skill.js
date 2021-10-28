@@ -8,25 +8,57 @@ import "slick-carousel/slick/slick-theme.css";
 const Skill = () => {
   let skillNames = [
     "HTML",
-    "CSS",
     "JavaScript",
-    "SASS",
     "React JS",
     "Redux",
+    "CSS",
+    "SASS",
     "Bootstrap",
+    "Material UI",
     "GIT",
     "Agile",
+    "Cypress",
   ];
   let settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
     className: "skill-card",
     autoplay: true,
     speed: 5000,
-    autoplaySpeed: 6000,
-    cssEase: "linear",
+    autoplaySpeed: 2000,
+    cssEase: "cubic-bezier(0.600, -0.280, 0.735, 0.045)",
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          speed: 5000,
+        },
+      },
+    ],
   };
 
   return (

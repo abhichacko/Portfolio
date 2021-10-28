@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { StyleWrapper } from "./NavBar.styled";
 import { MdNightlight } from "react-icons/md";
-import { BsLightningChargeFill } from "react-icons/bs";
+import { WiDaySunny } from "react-icons/wi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 
@@ -44,10 +44,7 @@ const NavBar = () => {
             {themeName === THEMES.DARK ? (
               <MdNightlight className="theme-icon" onClick={changeThemeName} />
             ) : (
-              <BsLightningChargeFill
-                className="theme-icon"
-                onClick={changeThemeName}
-              />
+              <WiDaySunny className="theme-icon" onClick={changeThemeName} />
             )}
           </Navbar.Collapse>
         </Container>
