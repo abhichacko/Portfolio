@@ -7,6 +7,9 @@ export const StyleWrapper = styled.div`
     &:hover {
       transform: scale(1.5);
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
   }
   a {
     color: ${(props) => props.theme.fontColor};
