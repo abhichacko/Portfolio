@@ -4,7 +4,10 @@ import { StyledWrapper } from "./Education.styled";
 const Education = () => {
   const educationDetails = useSelector((state) => state.educationDetails);
   return (
-    <StyledWrapper className="d-flex flex-column w-100 align-items-center ">
+    <StyledWrapper
+      className="d-flex flex-column w-100 align-items-center "
+      id="education"
+    >
       <h1>Education</h1>
       {educationDetails &&
         educationDetails.map((item) => {
@@ -22,7 +25,9 @@ const Education = () => {
                 <h5>{item.collegeName}</h5>
                 <h6>{item.location}</h6>
               </div>
-              <p>{item.details}</p>
+              <div className="education-details">
+                <p>{item.details}</p>
+              </div>
             </div>
           );
         })}

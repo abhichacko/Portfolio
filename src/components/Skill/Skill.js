@@ -25,8 +25,9 @@ const Skill = () => {
     className: "skill-card",
     autoplay: true,
     speed: 5000,
-    autoplaySpeed: 2000,
-    cssEase: "cubic-bezier(0.600, -0.280, 0.735, 0.045)",
+    autoplaySpeed: 900,
+    // cssEase: "cubic-bezier(0.600, -0.280, 0.735, 0.045)",
+    cssEase: "linear",
     arrows: false,
     responsive: [
       {
@@ -62,7 +63,7 @@ const Skill = () => {
   };
 
   return (
-    <SkillWrapper className="d-flex flex-column align-items-center">
+    <SkillWrapper className="d-flex flex-column align-items-center" id="skills">
       <h1>Skills</h1>
 
       <Slider {...settings}>

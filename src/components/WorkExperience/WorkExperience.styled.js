@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   color: ${(props) => props.theme.fontColor};
-  .education-item {
+  .workexperience-item {
     min-height: 14vh;
     width: 83%;
     display: flex;
@@ -12,15 +12,15 @@ export const StyledWrapper = styled.div`
     padding: 1.2rem;
     position: relative;
   }
-  .education-name {
+  .workexperience-name {
     &::before {
       top: 26px;
       left: -9px;
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       content: "";
       position: absolute;
-      border-radius: 50%;
+      /* border-radius: 50%; */
       background-color: ${(props) => props.theme.designColor};
     }
   }
@@ -28,9 +28,10 @@ export const StyledWrapper = styled.div`
     word-wrap: wrap;
     text-align: justify;
     text-justify: inter-word;
+    margin-bottom: 0.5rem;
     font-weight: 600;
   }
-  .education-details {
-    margin-top: 0.7rem;
+  .work-details {
+    margin-top: 1rem;
   }
 `;

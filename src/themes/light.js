@@ -6,6 +6,7 @@ const light = {
   logoFontColor: "",
   logoBackground: "#985fcd",
   shadeBackground: "",
+  designColor: "#09bead",
 };
 
 export default light;

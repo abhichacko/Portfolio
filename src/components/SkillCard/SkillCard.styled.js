@@ -5,6 +5,6 @@ export const StyleWrapper = styled.div`
   .icon {
     font-size: 6rem;
     margin: 1.5rem;
-    color: ${(props) => props.theme.fontColor};
+    color: ${(props) => props.theme.designColor};
   }
 `;

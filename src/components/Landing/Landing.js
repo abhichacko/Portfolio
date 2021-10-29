@@ -6,6 +6,7 @@ import ProfileCard from "../ProfileCard/ProfileCard";
 import Skill from "../Skill/Skill";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import Education from "../Education/Education";
+import WorkExperience from "../WorkExperience/WorkExperience";
 
 const Landing = (props) => {
   return (
@@ -15,6 +16,7 @@ const Landing = (props) => {
       <div className="container-fluid d-flex flex-column align-items-center">
         <ProfileCard />
         <Skill />
+        <WorkExperience />
         <Education />
         <SocialMedia />
       </div>

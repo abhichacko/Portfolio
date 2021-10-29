@@ -44,10 +44,19 @@ const initialState = {
   workExperience: [
     {
       designation: "Senior Systems Engineer",
-      year: "2020-present",
+      companyName: "Infosys Limited",
+      year: "10/2020-present",
       location: "Bengaluru, India",
+      details: `Worked on UI development for a dashboard for Business Administrators using React JS. Different functionalities including creating, modifying and displaying entities such as Authorities, Parents & Groups, and creation of new Admin users. Managed design, functional approach for UI delivery and worked on major severity issues. Created complex UI designs using class-based and functional components. \nTechnology Used : React JS, Redux, SASS, Styled-Components,react-bootstrap, axios`,
     },
-    {},
+    {
+      designation: "Systems Engineer",
+      companyName: "Infosys Limited",
+      year: "10/2019-09/2021",
+      location: "Bengaluru, India",
+      details:
+        "Worked on the design of micro-service authentication architecture for both internal and public endpoints. Created demo micro-services showcasing different functionalities in Java Spring Boot and deployed it in Azure Spring Cloud. Exposed APIs using Azure API Management. \nTechnology Used : Azure Spring Cloud, Azure API Management, Java Spring Boot",
+    },
   ],
 };
 

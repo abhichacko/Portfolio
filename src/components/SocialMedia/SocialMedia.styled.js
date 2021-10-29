@@ -12,7 +12,7 @@ export const StyleWrapper = styled.div`
     }
   }
   a {
-    color: ${(props) => props.theme.fontColor};
+    color: ${(props) => props.theme.designColor};
   }
   .social-wrapper {
     margin: 2rem;

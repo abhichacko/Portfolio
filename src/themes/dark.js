@@ -7,5 +7,6 @@ const dark = {
   fontColor: "#D0D3D4",
   logoFontColor: "",
   logoBackground: "#ac54f0",
+  designColor: "#09bead",
 };
 export default dark;
