@@ -6,7 +6,10 @@ import { useSelector } from "react-redux";
 const Project = () => {
   const projects = useSelector((state) => state.projects);
   return (
-    <StyleWrapper className=" d-flex flex-column align-items-center">
+    <StyleWrapper
+      className=" d-flex flex-column align-items-center"
+      id="projects"
+    >
       <h1>Personal Projects</h1>
 
       <div className="d-flex w-100 justify-content-center flex-wrap">
