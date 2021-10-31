@@ -5,6 +5,7 @@ import { MdNightlight } from "react-icons/md";
 import { WiDaySunny } from "react-icons/wi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [themeName, setThemeName] = useState(THEMES.DARK);
@@ -19,6 +20,7 @@ const NavBar = () => {
       setToggleClass("navbar-light");
     }
   };
+
   return (
     <StyleWrapper>
       <Navbar collapseOnSelect expand="md" fixed="top">
@@ -26,7 +28,16 @@ const NavBar = () => {
           <Navbar.Brand href="#home">
             <div class="wrapper">
               <div class="circle">
-                <span id="text">Ab</span>
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-170}
+                  duration={100}
+                  id="text"
+                >
+                  Ab
+                </Link>
               </div>
             </div>
           </Navbar.Brand>
@@ -36,12 +47,56 @@ const NavBar = () => {
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#skills">Skills</Nav.Link>
-              <Nav.Link href="#experience">Experience</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#education">Education</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={100}
+                className="nav-link"
+              >
+                Skills
+              </Link>
+              <Link
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+                className="nav-link"
+              >
+                Experience
+              </Link>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+                className="nav-link"
+              >
+                Projects
+              </Link>
+              <Link
+                to="education"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+                className="nav-link"
+              >
+                Education
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+                className="nav-link"
+              >
+                Contact
+              </Link>
             </Nav>
             {themeName === THEMES.DARK ? (
               <MdNightlight className="theme-icon" onClick={changeThemeName} />

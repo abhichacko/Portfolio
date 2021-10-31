@@ -7,20 +7,23 @@ import Skill from "../Skill/Skill";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import Education from "../Education/Education";
 import WorkExperience from "../WorkExperience/WorkExperience";
+import Project from "../Project/Project";
 
 const Landing = (props) => {
   return (
-    <BodyWrapper>
+    <>
       <NavBar></NavBar>
-
-      <div className="container-fluid d-flex flex-column align-items-center">
-        <ProfileCard />
-        <Skill />
-        <WorkExperience />
-        <Education />
-        <SocialMedia />
-      </div>
-    </BodyWrapper>
+      <BodyWrapper>
+        <div className="container-fluid d-flex flex-column align-items-center">
+          <ProfileCard />
+          <Skill />
+          <WorkExperience />
+          <Project />
+          <Education />
+          <SocialMedia />
+        </div>
+      </BodyWrapper>
+    </>
   );
 };
 

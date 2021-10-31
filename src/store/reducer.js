@@ -1,4 +1,5 @@
 import ACTION_TYPES from "../constants/actionTypes";
+import projectImages from "../constants/images";
 
 const initialState = {
   themeName: "",
@@ -56,6 +57,34 @@ const initialState = {
       location: "Bengaluru, India",
       details:
         "Worked on the design of micro-service authentication architecture for both internal and public endpoints. Created demo micro-services showcasing different functionalities in Java Spring Boot and deployed it in Azure Spring Cloud. Exposed APIs using Azure API Management. \nTechnology Used : Azure Spring Cloud, Azure API Management, Java Spring Boot",
+    },
+  ],
+  projects: [
+    {
+      projectName: "Covid Battle",
+      techStack: [
+        "react js",
+        "react-redux",
+        "styled-components",
+        "react-bootstrap",
+        "material-ui",
+        "react-chartjs-2",
+        "axios",
+      ],
+      imageUrl: projectImages.covidAppImage,
+      visitLink: "https://abhichacko.github.io/Corona-Live-App/#/",
+      codeLink: "https://github.com/abhichacko/Corona-Live-App",
+      description:
+        "A responsive (SPA) dashboard created using React JS which displays the covid-19 related data of our country.",
+    },
+    {
+      projectName: "Music Player",
+      techStack: ["html", "css", "javascript"],
+      imageUrl: projectImages.musicPlayerImage,
+      visitLink: "https://abhichacko.github.io/MusicPlayer/",
+      codeLink: "https://github.com/abhichacko/MusicPlayer",
+      description:
+        "A responsive music player which supports both desktop and mobile view",
     },
   ],
 };

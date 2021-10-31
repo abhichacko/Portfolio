@@ -6,4 +6,14 @@ export const BodyWrapper = styled.div`
   background-image: url(${(props) => props.theme.backgroundImage}) !important;
   background-attachment: fixed;
   background-size: cover;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    cursor: pointer !important;
+    caret-color: transparent;
+  }
 `;

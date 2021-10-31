@@ -19,12 +19,15 @@ export const StyleWrapper = styled.div`
     letter-spacing: 0.1rem;
     margin-left: 2.5rem !important;
     text-align: center;
+    cursor: pointer;
+    caret-color: transparent;
     &:hover {
       color: ${(props) => props.theme.fontColor};
     }
     &.active {
       border-left: solid 0.3rem ${(props) => props.theme.designColor};
-      color: ${(props) => props.theme.fontColor};
+      color: ${(props) => props.theme.fontColor} !important;
+      text-decoration: none !important;
 
       @media screen and (max-width: 500px) {
         //do Smth
@@ -78,6 +81,8 @@ export const StyleWrapper = styled.div`
   }
 
   .navbar-brand {
+    .nav-link {
+    }
     > .wrapper {
       top: 0;
       left: 0;

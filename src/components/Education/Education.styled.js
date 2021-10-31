@@ -33,4 +33,7 @@ export const StyledWrapper = styled.div`
   .education-details {
     margin-top: 0.7rem;
   }
+  h1 {
+    margin: 3rem;
+  }
 `;

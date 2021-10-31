@@ -34,4 +34,7 @@ export const StyledWrapper = styled.div`
   .work-details {
     margin-top: 1rem;
   }
+  h1 {
+    margin: 3rem;
+  }
 `;
