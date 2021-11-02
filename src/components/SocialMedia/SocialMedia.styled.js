@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyleWrapper = styled.div`
   color: ${(props) => props.theme.fontColor};
+  margin-bottom: 1rem;
   .social-icon {
     font-size: 4rem;
     &:hover {

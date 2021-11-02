@@ -6,6 +6,7 @@ import { WiDaySunny } from "react-icons/wi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 import { Link } from "react-scroll";
+import resume from "../../assets/resume/AbhilashThankachan-ReactJS.pdf";
 
 const NavBar = () => {
   const [themeName, setThemeName] = useState(THEMES.DARK);
@@ -25,11 +26,11 @@ const NavBar = () => {
     <StyleWrapper>
       <Navbar collapseOnSelect expand="md" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <div class="wrapper">
               <div class="circle">
                 <Link
-                  to="about"
+                  to="portfolio"
                   spy={true}
                   smooth={true}
                   offset={-170}
@@ -57,6 +58,7 @@ const NavBar = () => {
               >
                 Skills
               </Link>
+
               <Link
                 to="experience"
                 spy={true}
@@ -77,6 +79,7 @@ const NavBar = () => {
               >
                 Projects
               </Link>
+
               <Link
                 to="education"
                 spy={true}
@@ -87,16 +90,24 @@ const NavBar = () => {
               >
                 Education
               </Link>
+
               <Link
-                to="contact"
+                to="connect"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={100}
                 className="nav-link"
               >
                 Contact
               </Link>
+              <a
+                href={resume}
+                download="AbhilashThankachan-ReactJS.pdf"
+                className="nav-link"
+              >
+                Resume
+              </a>
             </Nav>
             {themeName === THEMES.DARK ? (
               <MdNightlight className="theme-icon" onClick={changeThemeName} />

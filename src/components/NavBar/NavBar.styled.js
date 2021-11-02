@@ -25,7 +25,7 @@ export const StyleWrapper = styled.div`
       color: ${(props) => props.theme.fontColor};
     }
     &.active {
-      border-left: solid 0.3rem ${(props) => props.theme.designColor};
+      border-left: solid 0.3rem ${(props) => props.theme.designColor} !important;
       color: ${(props) => props.theme.fontColor} !important;
       text-decoration: none !important;
 
@@ -105,6 +105,8 @@ export const StyleWrapper = styled.div`
           font-weight: bold;
           text-decoration: none !important;
           color: ${(props) => props.theme.designColor};
+          cursor: pointer !important;
+          caret-color: transparent;
         }
       }
     }

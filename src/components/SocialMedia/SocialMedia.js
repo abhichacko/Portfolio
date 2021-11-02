@@ -9,8 +9,8 @@ const SocialMedia = () => {
   const twitter = useSelector((state) => state.twitter);
   return (
     <StyleWrapper
+      id="connect"
       className="d-flex flex-column align-items-center w-100"
-      id="contact"
     >
       <h1>Lets Connect</h1>
       <div className="d-flex justify-content-evenly align-items-center">

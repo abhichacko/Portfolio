@@ -8,7 +8,7 @@ const ProfileCard = () => {
   const profileSummary = useSelector((state) => state.profileSummary);
 
   return (
-    <ProfileWrapper id="about">
+    <ProfileWrapper id="portfolio">
       <div className="d-flex flex-column-reverse align-items-center flex-lg-row align-items-lg-center">
         <img
           src={avatar}

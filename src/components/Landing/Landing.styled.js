@@ -12,7 +12,8 @@ export const BodyWrapper = styled.div`
   h4,
   h5,
   h6,
-  p {
+  p,
+  a {
     cursor: pointer !important;
     caret-color: transparent;
   }
