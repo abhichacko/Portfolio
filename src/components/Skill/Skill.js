@@ -49,14 +49,15 @@ const Skill = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          speed: 2500,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          speed: 5000,
+          speed: 2500,
         },
       },
     ],

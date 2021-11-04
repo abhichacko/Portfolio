@@ -17,4 +17,8 @@ export const BodyWrapper = styled.div`
     cursor: pointer !important;
     caret-color: transparent;
   }
+  .devloper-name {
+    color: ${(props) => props.theme.fontColor};
+    margin: 4rem 0 4rem 0;
+  }
 `;

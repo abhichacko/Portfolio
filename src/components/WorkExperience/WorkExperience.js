@@ -21,7 +21,7 @@ const WorkExperience = () => {
                   <h5> {item.year}</h5>
                 </div>
               </div>
-              <div className="d-flex flex-row justify-content-between ">
+              <div className="d-flex flex-row justify-content-between">
                 <h5>{item.companyName}</h5>
                 <h6>{item.location}</h6>
               </div>

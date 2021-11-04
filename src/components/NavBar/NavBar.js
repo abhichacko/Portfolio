@@ -9,6 +9,7 @@ import { Link } from "react-scroll";
 import resume from "../../assets/resume/AbhilashThankachan-ReactJS.pdf";
 
 const NavBar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [themeName, setThemeName] = useState(THEMES.DARK);
   const [toggleClass, setToggleClass] = useState("navbar-light");
   const changeThemeName = () => {
@@ -21,10 +22,18 @@ const NavBar = () => {
       setToggleClass("navbar-light");
     }
   };
-
+  console.log(isNavOpen);
   return (
     <StyleWrapper>
-      <Navbar collapseOnSelect expand="md" fixed="top">
+      <Navbar
+        collapseOnSelect={true}
+        expand="md"
+        fixed="top"
+        expanded={isNavOpen}
+        onToggle={() => {
+          setIsNavOpen(!isNavOpen);
+        }}
+      >
         <Container>
           <Navbar.Brand>
             <div class="wrapper">
@@ -36,6 +45,9 @@ const NavBar = () => {
                   offset={-170}
                   duration={100}
                   id="text"
+                  onClick={() => {
+                    if (isNavOpen) setIsNavOpen(!isNavOpen);
+                  }}
                 >
                   Ab
                 </Link>
@@ -55,6 +67,9 @@ const NavBar = () => {
                 offset={-100}
                 duration={100}
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Skills
               </Link>
@@ -66,6 +81,9 @@ const NavBar = () => {
                 offset={-70}
                 duration={100}
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Experience
               </Link>
@@ -76,6 +94,9 @@ const NavBar = () => {
                 offset={-70}
                 duration={100}
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Projects
               </Link>
@@ -87,6 +108,9 @@ const NavBar = () => {
                 offset={-70}
                 duration={100}
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Education
               </Link>
@@ -95,9 +119,12 @@ const NavBar = () => {
                 to="connect"
                 spy={true}
                 smooth={true}
-                offset={-20}
+                offset={-300}
                 duration={100}
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Contact
               </Link>
@@ -105,6 +132,9 @@ const NavBar = () => {
                 href={resume}
                 download="AbhilashThankachan-ReactJS.pdf"
                 className="nav-link"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 Resume
               </a>

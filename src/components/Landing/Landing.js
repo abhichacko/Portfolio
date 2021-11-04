@@ -21,7 +21,9 @@ const Landing = (props) => {
           <Project />
           <Education />
           <SocialMedia />
-          <h6>Developed by &copy; Abhilash Thankachan </h6>
+          <h6 className="devloper-name">
+            Developed by &copy; Abhilash Thankachan{" "}
+          </h6>
         </div>
       </BodyWrapper>
     </>

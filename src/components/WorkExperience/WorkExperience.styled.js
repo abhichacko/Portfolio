@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   color: ${(props) => props.theme.fontColor};
+  margin: 4rem 0 4rem 0;
   .workexperience-item {
     min-height: 14vh;
     width: 83%;
@@ -36,5 +37,22 @@ export const StyledWrapper = styled.div`
   }
   h1 {
     margin: 3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .workexperience-name {
+      max-width: 50%;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: 0.9rem;
+    }
+    h6 {
+      font-size: 0.7rem;
+    }
+    p {
+      font-size: 0.85rem;
+    }
   }
 `;
