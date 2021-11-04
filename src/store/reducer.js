@@ -46,7 +46,7 @@ const initialState = {
     {
       designation: "Senior Systems Engineer",
       companyName: "Infosys Limited",
-      year: "10/2020-present",
+      year: "10/2021-present",
       location: "Bengaluru, India",
       details: `Worked on UI development for a dashboard for Business Administrators using React JS. Different functionalities including creating, modifying and displaying entities such as Authorities, Parents & Groups, and creation of new Admin users. Managed design, functional approach for UI delivery and worked on major severity issues. Created complex UI designs using class-based and functional components. \nTechnology Used : React JS, Redux, SASS, Styled-Components,react-bootstrap, axios`,
     },

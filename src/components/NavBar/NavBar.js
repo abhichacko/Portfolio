@@ -6,7 +6,7 @@ import { WiDaySunny } from "react-icons/wi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 import { Link } from "react-scroll";
-import resume from "../../assets/resume/AbhilashThankachan-ReactJS.pdf";
+import resume from "../../assets/resume/AbhilashThankachan.ReactJS.pdf";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -21,8 +21,9 @@ const NavBar = () => {
       setThemeName(THEMES.DARK);
       setToggleClass("navbar-light");
     }
+    setIsNavOpen(!isNavOpen);
   };
-  console.log(isNavOpen);
+
   return (
     <StyleWrapper>
       <Navbar

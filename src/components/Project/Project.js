@@ -22,7 +22,7 @@ const Project = () => {
               <img src={item.imageUrl} alt="projectImage" />
               <div className="d-flex tech flex-row flex-wrap">
                 {item.techStack.map((tech) => {
-                  return <h6>{tech}</h6>;
+                  return <h6 key={tech}>{tech}</h6>;
                 })}
               </div>
               <h4>{item.projectName}</h4>

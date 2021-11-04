@@ -29,6 +29,7 @@ const SocialMedia = () => {
             <SiLinkedin className="social-icon" />
           </a>
         </div>
+
         <div className="social-wrapper">
           <a href={instagram} target="_blank" rel="noopener noreferrer">
             <SiInstagram className="social-icon" />

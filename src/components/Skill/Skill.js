@@ -71,7 +71,7 @@ const Skill = () => {
         {skillNames.map((skill) => {
           return (
             <div>
-              <SkillCard skillName={skill} />
+              <SkillCard skillName={skill} key={skill} />
             </div>
           );
         })}

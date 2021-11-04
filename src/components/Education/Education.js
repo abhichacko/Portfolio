@@ -12,7 +12,7 @@ const Education = () => {
       {educationDetails &&
         educationDetails.map((item) => {
           return (
-            <div className="education-item">
+            <div className="education-item" key={item.educationName}>
               <div className="d-flex flex-row  align-items-center justify-content-between">
                 <div className="education-name">
                   <h4> {item.educationName}</h4>

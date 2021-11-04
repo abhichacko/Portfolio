@@ -10,9 +10,12 @@ const WorkExperience = () => {
     >
       <h1>Work Experience</h1>
       {workExperience &&
-        workExperience.map((item) => {
+        workExperience.map((item, index) => {
           return (
-            <div className="workexperience-item">
+            <div
+              className="workexperience-item"
+              key={`${item.designation}-${index}`}
+            >
               <div className="d-flex flex-row  align-items-center justify-content-between">
                 <div className="workexperience-name">
                   <h4> {item.designation}</h4>
@@ -26,8 +29,8 @@ const WorkExperience = () => {
                 <h6>{item.location}</h6>
               </div>
               <div className="work-details">
-                {item.details.split("\n").map((text) => {
-                  return <p>{text}</p>;
+                {item.details.split("\n").map((text, index) => {
+                  return <p key={index}>{text}</p>;
                 })}
               </div>
             </div>
