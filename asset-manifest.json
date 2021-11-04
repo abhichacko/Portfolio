@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.0a5aa47f.chunk.css",
-    "main.js": "/Portfolio/static/js/main.d47d549e.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.d47d549e.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.97827310.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.97827310.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.e3a064f7.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.e3a064f7.js.map",
     "static/css/2.24ed81d6.chunk.css": "/Portfolio/static/css/2.24ed81d6.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.24ed81d6.chunk.css.map": "/Portfolio/static/css/2.24ed81d6.chunk.css.map",
     "static/css/main.0a5aa47f.chunk.css.map": "/Portfolio/static/css/main.0a5aa47f.chunk.css.map",
     "static/js/2.c393696c.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.c393696c.chunk.js.LICENSE.txt",
-    "static/media/AbhilashThankachan-ReactJS.67014456.pdf": "/Portfolio/static/media/AbhilashThankachan-ReactJS.67014456.pdf",
+    "static/media/AbhilashThankachan.ReactJS.cf972f6c.pdf": "/Portfolio/static/media/AbhilashThankachan.ReactJS.cf972f6c.pdf",
     "static/media/abhilash.e6c0b804.jpg": "/Portfolio/static/media/abhilash.e6c0b804.jpg",
     "static/media/covidApp.556bf9b9.png": "/Portfolio/static/media/covidApp.556bf9b9.png",
     "static/media/musicPlayer.c3d190cd.png": "/Portfolio/static/media/musicPlayer.c3d190cd.png",
@@ -25,6 +25,6 @@
     "static/css/2.24ed81d6.chunk.css",
     "static/js/2.c393696c.chunk.js",
     "static/css/main.0a5aa47f.chunk.css",
-    "static/js/main.d47d549e.chunk.js"
+    "static/js/main.97827310.chunk.js"
   ]
 }
