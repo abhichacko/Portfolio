@@ -3,10 +3,12 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { StyleWrapper } from "./NavBar.styled";
 import { MdNightlight } from "react-icons/md";
 import { WiDaySunny } from "react-icons/wi";
+import { HiCloudDownload } from "react-icons/hi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 import { Link } from "react-scroll";
 import resume from "../../assets/resume/AbhilashThankachan.ReactJS.pdf";
+import logo from "../../assets/Ab_icon.png";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -37,23 +39,26 @@ const NavBar = () => {
       >
         <Container>
           <Navbar.Brand>
-            <div class="wrapper">
-              <div class="circle">
-                <Link
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={-170}
-                  duration={100}
-                  id="text"
-                  onClick={() => {
-                    if (isNavOpen) setIsNavOpen(!isNavOpen);
-                  }}
-                >
-                  Ab
-                </Link>
-              </div>
-            </div>
+            <Link
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-170}
+              duration={100}
+              id="text"
+              onClick={() => {
+                if (isNavOpen) setIsNavOpen(!isNavOpen);
+              }}
+            >
+              <img
+                src={logo}
+                alt="logo"
+                className="logo"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Home"
+              />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -138,12 +143,25 @@ const NavBar = () => {
                 }}
               >
                 Resume
+                <HiCloudDownload className="download-icon" />
               </a>
             </Nav>
             {themeName === THEMES.DARK ? (
-              <MdNightlight className="theme-icon" onClick={changeThemeName} />
+              <MdNightlight
+                className="theme-icon"
+                onClick={changeThemeName}
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Change Theme"
+              />
             ) : (
-              <WiDaySunny className="theme-icon" onClick={changeThemeName} />
+              <WiDaySunny
+                className="theme-icon"
+                onClick={changeThemeName}
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Change Theme"
+              />
             )}
           </Navbar.Collapse>
         </Container>

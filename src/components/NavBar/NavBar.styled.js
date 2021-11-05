@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const StyleWrapper = styled.div`
+  .logo {
+    width: 4rem;
+    height: 4rem;
+    @media screen and (max-width: 500px) {
+      //do Smth
+      width: 3rem;
+      height: 3rem;
+    }
+  }
   .navbar {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: ${(props) => props.theme.background};
@@ -57,61 +66,18 @@ export const StyleWrapper = styled.div`
     font-size: 1.8rem;
     margin-left: 2rem;
     &:hover {
-      border-radius: 100%;
-      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      transform: scale(1.8);
     }
     @media screen and (max-width: 500px) {
       //do Smth
       margin-left: 0rem !important;
     }
   }
-  .dropdown-menu {
-    background-color: ${(props) => props.theme.background};
-    background-image: url(${(props) => props.theme.backgroundImage});
 
-    & .dropdown-item {
-      color: ${(props) => props.theme.fontColor};
-      /* font-weight: bold; */
-      &:hover {
-        background-color: ${(props) => props.theme.background};
-      }
-    }
-  }
-
-  .navbar-brand {
-    .nav-link {
-    }
-    > .wrapper {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      text-align: center;
-      width: 3.6rem;
-      height: 3.6rem;
-      > .circle {
-        border-radius: 100%;
-        width: 3.8rem;
-        height: 3.6rem;
-        border: 1px solid ${(props) => props.theme.designColor};
-        display: block;
-        box-shadow: 0px 6px 3px ${(props) => props.theme.designColor};
-        cursor: pointer;
-        > #text {
-          font-size: 2rem;
-          font-weight: bold;
-          text-decoration: none !important;
-          color: ${(props) => props.theme.designColor};
-          cursor: pointer !important;
-          caret-color: transparent;
-        }
-      }
-    }
-  }
   .navbar-collapse {
     text-align: center;
+  }
+  .download-icon {
+    font-size: 2rem;
   }
 `;
