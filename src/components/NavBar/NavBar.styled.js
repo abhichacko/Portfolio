@@ -4,6 +4,9 @@ export const StyleWrapper = styled.div`
   .logo {
     width: 4rem;
     height: 4rem;
+    &:hover {
+      transform: scale(1.2);
+    }
     @media screen and (max-width: 500px) {
       //do Smth
       width: 3rem;
