@@ -7,7 +7,7 @@ import { HiCloudDownload } from "react-icons/hi";
 import { THEMES } from "../../constants/theme";
 import { changeTheme } from "../../actions/themeActions";
 import { Link } from "react-scroll";
-import resume from "../../assets/resume/AbhilashThankachan.ReactJS.pdf";
+import resume from "../../assets/resume/AbhilashThankachan-ReactJS.pdf";
 import logo from "../../assets/Ab_icon.png";
 
 const NavBar = () => {
