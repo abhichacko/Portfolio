@@ -5,6 +5,7 @@ export const StyleWrapper = styled.div`
   margin: 10.5rem 0 4rem 0;
   .social-icon {
     font-size: 4rem;
+    color: ${(props) => props.theme.designColor};
     &:hover {
       transform: scale(1.5);
     }

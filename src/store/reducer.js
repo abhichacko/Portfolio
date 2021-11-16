@@ -12,6 +12,7 @@ const initialState = {
   linkedin: "https://www.linkedin.com/in/abhilash-thankachan-43b888162/",
   instagram: "https://www.instagram.com/itsmeabhi_z/",
   github: "https://github.com/abhichacko",
+  emailId: "itsmeabhilashthankachan@gmail.com",
   educationDetails: [
     {
       educationName: "Master of Computer Applications",
