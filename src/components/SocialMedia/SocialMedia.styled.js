@@ -19,7 +19,7 @@ export const StyleWrapper = styled.div`
   .social-wrapper {
     margin: 2rem;
     @media only screen and (max-width: 600px) {
-      margin: 1.5rem;
+      margin: 1rem;
     }
   }
 `;
